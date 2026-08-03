@@ -1,7 +1,7 @@
 # Fraud Detection: Tabular and Sequential Approaches
 
 Credit-card fraud detection on the Sparkov-style
-[`credit-card-transactions`](https://www.kaggle.com/) dataset (~1.29M transactions,
+[`credit-card-transactions`](https://www.kaggle.com/datasets/priyamchoksi/credit-card-transactions-dataset) dataset (~1.29M transactions,
 **~0.5789% fraud**), studied under **two deliberately different problem formulations**:
 
 - a **tabular** formulation — each transaction is classified independently from its own
@@ -23,7 +23,7 @@ reported separately and are not directly comparable**. The point of the project 
 | `eda_and_tabular_boosting_ensembles.ipynb` | Tabular | Full EDA + CatBoost, XGBoost, LightGBM, Soft-Voting Ensemble |
 | `sequential_lstm.ipynb` | Sequential | LSTM over 20-transaction per-card windows |
 
-The dataset can be downloaded from [Kaggle](https://www.kaggle.com/datasets/priyamchoksi/credit-card-transactions-dataset)) and placed at
+The dataset can be downloaded from [Kaggle](https://www.kaggle.com/datasets/priyamchoksi/credit-card-transactions-dataset) and placed at
 `credit_card_transactions.csv` (default Kaggle path
 `/kaggle/input/datasets/priyamchoksi/credit-card-transactions-dataset`).
 
