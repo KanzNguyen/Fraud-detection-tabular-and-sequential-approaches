@@ -63,8 +63,10 @@ notebooks and never cross-compares their numbers.
 ### Feature engineering (shared)
 Time parts (hour, weekday, month, season, …), haversine distance, and card-holder age.
 `unix_time` and `trans_year` are used only for ordering/age and are **excluded from model
-features**: under a temporal split every test `unix_time` exceeds every train value, so feeding
-them in would be a look-ahead leak.
+features**. `unix_time` is ~98.3% unique across the 1.29M rows, so it carries no generalizable 
+signal; the reusable temporal pattern is already captured by the derived parts (hour, weekday, month, season). 
+Under the sequential temporal split, every test `unix_time` exceeds every train value, so feeding them 
+in would be a look-ahead leak.
 
 ### Encoding — matched to the model family
 - **Baselines notebook (KNN, LDA, Random Forest):** one-hot encoding. KNN and LDA are distance/linear models that need it.
