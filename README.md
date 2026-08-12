@@ -88,6 +88,11 @@ KNN and LDA are left unweighted: KNN has no class-weight mechanism, and LDA is u
 
 ## Results
 
+> **Note on the dataset.** This is a *simulated* (Sparkov) dataset — fraud patterns are
+> generator-produced and far more separable than real-world fraud, so the absolute PR-AUC values
+> below are an optimistic ceiling, **not** a production estimate. The focus of this project is the
+> modelling and validation methodology, not the headline numbers.
+ 
 > PR-AUC is the primary (threshold-independent) metric; Precision/Recall/F1 are at the tuned threshold.
 
 ### Tabular — baselines 
